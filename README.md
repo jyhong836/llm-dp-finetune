@@ -1,5 +1,17 @@
 ## Private Finetuning for LLMs (LLM-PFT)
 
+<p>
+    <a href="https://www.python.org/downloads/">
+            <img alt="Build" src="https://img.shields.io/badge/3.10-Python-blue">
+    </a>
+    <a href="https://pytorch.org">
+            <img alt="Build" src="https://img.shields.io/badge/2.0-PyTorch-orange">
+    </a>
+    <a href="https://github.com/jyhong836/fast-differential-privacy">
+            <img alt="Build" src="https://img.shields.io/badge/2.0-fastDP-orange">
+    </a>
+</p>
+
 The codebase for LLM DP/scrubbing/undefended finetuning in [LLM-PBE](https://llm-pbe.github.io/home) [![arXiv](https://img.shields.io/badge/arXiv-2302.00539-green)](https://arxiv.org/abs/2302.00539).
 
 This code is modified from the [code](https://github.com/microsoft/analysing_pii_leakage) of [pii-leakage](https://arxiv.org/abs/2302.00539).
@@ -12,17 +24,6 @@ The repository differs [pii-leakage](https://github.com/microsoft/analysing_pii_
 3. (WIP) We extend the scrubbing tool from Flair to Private AI.
 4. We exclude PII analysis tools but focus on fine-tuning.
 
-<p>
-    <a href="https://www.python.org/downloads/">
-            <img alt="Build" src="https://img.shields.io/badge/3.10-Python-blue">
-    </a>
-    <a href="https://pytorch.org">
-            <img alt="Build" src="https://img.shields.io/badge/2.0-PyTorch-orange">
-    </a>
-    <a href="https://github.com/jyhong836/fast-differential-privacy">
-            <img alt="Build" src="https://img.shields.io/badge/2.0-fastDP-orange">
-    </a>
-</p>
 
 ## Build & Run
 
@@ -38,7 +39,7 @@ conda install cuda -c nvidia -y
 pip install -e .
 ```
 
-Trubleshooting:
+**Troubleshooting**:
 * `FlashAttention only support Ampere and newer.`
   - update `transformer` to the latest
   - Add below if still not working.
