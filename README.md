@@ -12,7 +12,7 @@
     </a>
 </p>
 
-The codebase for LLM DP/scrubbing/undefended finetuning in [LLM-PBE](https://llm-pbe.github.io/home) [![arXiv](https://img.shields.io/badge/arXiv-2302.00539-green)](https://arxiv.org/abs/2302.00539).
+The codebase for LLM DP/scrubbing/undefended finetuning in [LLM-PBE](https://llm-pbe.github.io/home) [![arXiv](https://img.shields.io/badge/arXiv-2408.12787-green)](https://arxiv.org/abs/2408.12787).
 
 This code is modified from the [code](https://github.com/microsoft/analysing_pii_leakage) of [pii-leakage](https://arxiv.org/abs/2302.00539).
 This repository supports fine-tuning latest LLMs, Flair Named Entity Recognition (NER) models, and Private AI API (for scrubbing).
