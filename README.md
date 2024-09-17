@@ -1,13 +1,13 @@
 ## Private Finetuning for LLMs (LLM-PFT)
 
-The codebase for LLM DP/scrubbing/undefended finetuning in [LLM-PBE](https://llm-pbe.github.io/home).
+The codebase for LLM DP/scrubbing/undefended finetuning in [LLM-PBE](https://llm-pbe.github.io/home) [![arXiv](https://img.shields.io/badge/arXiv-2302.00539-green)](https://arxiv.org/abs/2302.00539).
 
-This code is modified from pii-leakage ([![arXiv](https://img.shields.io/badge/arXiv-2302.00539-green)](https://arxiv.org/abs/2302.00539), [github](https://github.com/microsoft/analysing_pii_leakage)).
+This code is modified from the [code](https://github.com/microsoft/analysing_pii_leakage) of [pii-leakage](https://arxiv.org/abs/2302.00539).
 This repository supports fine-tuning latest LLMs, Flair Named Entity Recognition (NER) models, and Private AI API (for scrubbing).
 It allows fine-tuning (i) undefended, (ii) differentially-private and (iii) scrubbed language models on ECHR and Enron.
 
 The repository differs [pii-leakage](https://github.com/microsoft/analysing_pii_leakage) in these ways:
-1. We replace opacus with [fast-dp](https://github.com/awslabs/fast-differential-privacy/tree/main) which is more memory efficient and is compatible with latest pytorch 2.0, cuda and distributed training (e.g., deepspeed).
+1. We replace opacus with a customized version of [fast-dp](https://github.com/jyhong836/fast-differential-privacy) which is more memory efficient and is compatible with latest pytorch 2.0, cuda and distributed training (e.g., deepspeed).
 2. We can support latest LLMs, e.g., LLAMA.
 3. (WIP) We extend the scrubbing tool from Flair to Private AI.
 4. We exclude PII analysis tools but focus on fine-tuning.
@@ -17,10 +17,10 @@ The repository differs [pii-leakage](https://github.com/microsoft/analysing_pii_
             <img alt="Build" src="https://img.shields.io/badge/3.10-Python-blue">
     </a>
     <a href="https://pytorch.org">
-            <img alt="Build" src="https://img.shields.io/badge/1.11-PyTorch-orange">
+            <img alt="Build" src="https://img.shields.io/badge/2.0-PyTorch-orange">
     </a>
-    <a href="https://github.com/pytorch/opacus">
-            <img alt="Build" src="https://img.shields.io/badge/1.12-opacus-orange">
+    <a href="https://github.com/jyhong836/fast-differential-privacy">
+            <img alt="Build" src="https://img.shields.io/badge/2.0-fastDP-orange">
     </a>
 </p>
 
