@@ -61,6 +61,12 @@ torch.backends.cuda.enable_mem_efficient_sdp(False)
   pip install fastDP@git+https://github.com/jyhong836/fast-differential-privacy.git  # for `zero grad DP stage3()` error.
   ```
 * `PrivacyEngine_Distributed_stage_2_and_3.__init__.<local>.zero_grad_DP_stage3() got an unexpected keyword argument 'set_to_none'`. Install a fixed version of fast-dp by `pip install fastDP@git+https://github.com/jyhong836/fast-differential-privacy.git`.
+* If you encounter the following error message when running the attack:
+```
+if self.pad_token_id is not None and self.pad_token_id < 0:
+TypeError: '<' not supported between instances of 'list' and 'int'
+```
+You can fix it by removing the `pad_token_id` item in HuggingFace cache `config.json` (e.g., the path may be like `~/.cache/huggingface/hub/models--LLM-PBE--Llama3.1-8b-instruct-LLMPC-Red-Team/snapshots/xxx/config.json`) and run again.
 
 
 ## Usage
